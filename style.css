@@ -1,24 +1,27 @@
 body {
     margin: 0px;
+    height: auto;
+    
 }
 
  .deafheaven-text {
     height: 100px;
     width: auto;
-    
-} 
+}
+
 .deafheaven-sidebar-logo{
     height: 50px;
-    width: auto;
-    justify-self: flex-start;
-    
+    width: auto;    
 }
+
 .hero {
     display: flex;
     align-items: center;
     justify-content:space-between;
     background-color: black;
+    position: -webkit-sticky;
     position: sticky;
+    top: 0;
 }
 
 .links-container {
@@ -36,7 +39,7 @@ body {
     width: 300px;
 
     background-color: black;
-    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.75);
     transition: 0.5s ease-out;
 }
 
@@ -56,6 +59,7 @@ nav a {
 
 nav a:hover {
     background-color: #aaade4;
+    font-weight: bold;
 }
 
 .open-sidebar-button, .close-sidebar-button {
@@ -80,3 +84,59 @@ nav a:hover {
 #sidebar-active {
     display: none;
 }
+
+/* @keyframes band {
+    0% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 0;
+    }
+
+    67% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} */
+@keyframes band {
+0% { background-image: url("../images/band/Deafheaven1.jpeg"); }
+33% { background-image: url("../images/band/Deafheaven2.jpeg"); }
+66% { background-image: url("../images/band/Deafheaven3.jpeg"); }
+100% { background-image: url("../images/band/Deafheaven1.jpeg"); }
+} 
+
+.Band {
+    width: 1865px;
+    height: 960px;
+    position: absolute;
+}
+
+.band-images {
+    /* /* width: 1865px;
+    height: 100vh; */
+    /* object-fit: cover;  */
+    /* position: relative; */
+    /* top: 0;
+    left: 0; */
+   /* animation: band 5s ease-in-out alternate 1 ; */ 
+   width: 100vw;
+   height: 960px;
+   background-repeat: no-repeat;
+   animation: band 30s ease-in-out infinite;
+}
+
+/* img:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+img:nth-of-type(2) {
+    animation-delay: 3s;
+}
+
+img:nth-of-type(3) {
+    animation-delay: 3s;
+} */
