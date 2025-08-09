@@ -21,4 +21,5 @@ body {
     padding: 0px; */
     justify-content:space-between;
     background-color: black;
+    position: sticky;
 }
