@@ -8,12 +8,29 @@
 </head>
 <body>
     <div class="hero">
-        <img class="deafheaven-sidebar-logo" src="../images/logos/logo.png" alt="logo">
+            <label for="sidebar-active" class="open-sidebar-button"><img class="deafheaven-sidebar-logo" src="../images/logos/logo.png" alt="logo"></label>
+
         <div class="main-logo">
             <a name="top"></a>
             <a  href="#top"><img class="deafheaven-text" src="../images/logos/deafheaven.png" alt="DeafHeaven"></a>
         </div>
         <div class="right"></div>
     </div>
+    <nav>
+        <input type="checkbox" id="sidebar-active">
+        <label id="overlay" for="sidebar-active"></label>
+        <div class="links-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <img class="deafheaven-sidebar-logo" src="../images/logos/logo.png" alt="logo">
+            </label>
+
+            <a class="home-link" href="#">Home</a>
+            <a href="#">Tour</a>
+            <a href="#">Shop</a>
+            <a href="#">Announcments</a>
+            <a href="#">Contact</a>
+
+        </div>
+    </nav>
 </body>
 </html>

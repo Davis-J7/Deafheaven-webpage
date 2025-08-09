@@ -7,7 +7,7 @@ body {
     width: auto;
     
 } 
-.deafheaven-sidebar-logo {
+.deafheaven-sidebar-logo{
     height: 50px;
     width: auto;
     justify-self: flex-start;
@@ -16,10 +16,67 @@ body {
 .hero {
     display: flex;
     align-items: center;
-    /* justify-content: center; */
-    /* margin: 0;
-    padding: 0px; */
     justify-content:space-between;
     background-color: black;
     position: sticky;
+}
+
+.links-container {
+    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 10;
+    width: 300px;
+
+    background-color: black;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.5s ease-out;
+}
+
+nav a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    
+    display: flex;
+    justify-content: center;
+
+    text-decoration: none;
+    color: white;
+
+}
+
+nav a:hover {
+    background-color: #aaade4;
+}
+
+.open-sidebar-button, .close-sidebar-button {
+    display: block;
+    padding: 10px 20px;
+}
+
+#sidebar-active:checked ~ .links-container {
+    left: 0;
+
+}
+
+#sidebar-active:checked ~ #overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+#sidebar-active {
+    display: none;
 }
