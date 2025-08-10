@@ -22,6 +22,7 @@ body {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 9;
 }
 
 .links-container {
@@ -105,6 +106,8 @@ nav a:hover {
    animation: band 30s ease-in-out infinite;
 }
 
+/* The albums section */
+
 .albums-container {
     background-color: black;
     display: flex;
@@ -163,3 +166,93 @@ nav a:hover {
   opacity: 1;
   transform: rotate(-45deg) translateY(100%);
 }
+
+/* Band Members pop-up section */
+
+/* .band-members-layout {
+    background-color: rgb(241, 11, 11);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 32px;
+    padding-top: 64px;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 225px;
+    position: relative;
+    max-width: 100%;
+    flex-grow: 1;
+}
+
+.popup-body {
+    text-wrap: wrap;
+    width: 225px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    height: auto;
+    background-color: #aaade4;
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+
+}
+
+.popup-image:hover + .popup-body{
+   transform: translateY(225px);
+   transition: ease-in-out 0.5s;
+}
+
+.popup-image {
+    z-index: 2;
+    position: absolute;
+    max-width: 100%;
+} */
+
+.band-members-layout {
+  display: flex; /* Establishes a flexbox layout */
+  flex-wrap: wrap; /* Allows items to wrap to the next line on small screens */
+  justify-content: center; /* Centers the items horizontally */
+  gap: 20rem; /* Adds space between the cards */
+  padding: 2rem; /* Adds some space around the entire section */
+  background-color: black; /* A light background for the section */
+}
+
+/* Styling for each individual member card */
+.popup {
+  width: 225px; /* Sets a fixed width for each card */
+  background-color: #aaade4;
+  border-radius: 8px; /* Rounds the corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  overflow: hidden; /* Ensures the image corners are also rounded */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Makes the card lift up slightly when hovered over */
+.popup:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the images within the cards */
+.popup-image {
+  width: 100%; /* Makes the image fill the card's width */
+  height: 225px; /* Sets a fixed height for all images */
+  object-fit: cover; /* Ensures images cover the area without distortion */
+}
+
+/* Styling for the text (member's name) */
+.popup-body {
+  padding: 1rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #333;
+}
+
