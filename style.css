@@ -1,10 +1,21 @@
 body {
     margin: 0px;
     height: auto;
+    background-color: black;
     
 }
 
- .deafheaven-text {
+p {
+    background-color: black;
+    color: #aaade4;
+    font-size: 54px;
+    font-weight: 900;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium';
+    text-align: center;
+}
+
+.deafheaven-text {
     height: 100px;
     width: auto;
 }
@@ -137,7 +148,7 @@ nav a:hover {
 .album {
   width: 255px;
   height: 255px;
-  background: #111;
+  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -271,11 +282,39 @@ nav a:hover {
     
 }
 
-a {
+#st{
     text-decoration: none;
+    color: black;
 }
 
 .button-text {
     transform: skew(20deg) scaleX(-0.2); 
   transition: transform 0.4s ease-in-out;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 48px;
+    padding-right: 48px;
+    align-items: center;
+    background-color: black;
+
+}
+
+.logo {
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: #aaade4;
+    margin-right: 32px;
+
+}
+
+.footer-links {
+    gap: 4px;
+    padding: 16px;
 }
