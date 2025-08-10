@@ -82,28 +82,43 @@ nav a:hover {
     z-index: 9;
 }
 
-#sidebar-active {
+#sidebar-active { 
     display: none;
 }
 
 @keyframes band {
-0% { background-image: url("../images/band/Deafheaven1.jpeg"); }
-33% { background-image: url("../images/band/Deafheaven2.jpeg"); }
-66% { background-image: url("../images/band/Deafheaven3.jpeg"); }
-100% { background-image: url("../images/band/Deafheaven1.jpeg"); }
-} 
+  0%, 100% {
+    background-image: url("../images/band/Deafheaven1.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  33% {
+    background-image: url("../images/band/Deafheaven2.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  66% {
+    background-image: url("../images/band/Deafheaven3.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
 
 .Band {
-    width: 1865px;
+    width: 1920px;
     height: 960px;
     position: absolute;
+    
 }
 
 .band-images {
-   width: 100vw;
+   width: 1920px;
    height: 960px;
-   background-repeat: no-repeat;
-   animation: band 30s ease-in-out infinite;
+   animation: band 60s infinite;
+   
 }
 
 /* The albums section */
@@ -169,14 +184,15 @@ nav a:hover {
 
 /* Band Members pop-up section */
 
-/* .band-members-layout {
-    background-color: rgb(241, 11, 11);
+ .band-members-layout {
+    background-color: black;
     display: flex;
     flex-wrap: wrap;
     padding: 32px;
     padding-top: 64px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20rem;
     position: relative;
 }
 
@@ -188,7 +204,12 @@ nav a:hover {
     max-width: 225px;
     position: relative;
     max-width: 100%;
-    flex-grow: 1;
+    
+
+    border-radius: 8px;
+    box-shadow: 0 6px 8px #aaade4; 
+    transform: 0.3s ease, box-shadow 0.3s ease;
+    
 }
 
 .popup-body {
@@ -196,63 +217,65 @@ nav a:hover {
     width: 225px;
     padding-top: 4px;
     padding-bottom: 4px;
-    height: auto;
+
+    border-radius: 2px;
+
     background-color: #aaade4;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+
     text-align: center;
-    overflow: hidden;
     position: absolute;
+    bottom: 0;
+    transform: translateY(0);
 
 }
 
 .popup-image:hover + .popup-body{
-   transform: translateY(225px);
+   transform: translateY(100%);
    transition: ease-in-out 0.5s;
 }
 
 .popup-image {
     z-index: 2;
-    position: absolute;
     max-width: 100%;
-} */
+} 
 
-.band-members-layout {
-  display: flex; /* Establishes a flexbox layout */
-  flex-wrap: wrap; /* Allows items to wrap to the next line on small screens */
-  justify-content: center; /* Centers the items horizontally */
-  gap: 20rem; /* Adds space between the cards */
-  padding: 2rem; /* Adds some space around the entire section */
-  background-color: black; /* A light background for the section */
+.story {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding-top: 56px;
 }
 
-/* Styling for each individual member card */
-.popup {
-  width: 225px; /* Sets a fixed width for each card */
-  background-color: #aaade4;
-  border-radius: 8px; /* Rounds the corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-  overflow: hidden; /* Ensures the image corners are also rounded */
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+.story-button {
+    background-color: #aaade4;
+    color: black;
+
+    padding: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+
+    font-size: 32px;
+    font-weight: 900;
+    box-shadow: 0px 6px 12px #a7abf8;
+    transform: skewX(-20deg);
+    transform: 0.4s ease-in-out;
 }
 
-/* Makes the card lift up slightly when hovered over */
-.popup:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.story-button:hover {
+    
+    transform: skew(-20deg) translateY(-20px) translateX(10px) scaleX(1.2);
+    
 }
 
-/* Styling for the images within the cards */
-.popup-image {
-  width: 100%; /* Makes the image fill the card's width */
-  height: 225px; /* Sets a fixed height for all images */
-  object-fit: cover; /* Ensures images cover the area without distortion */
+a {
+    text-decoration: none;
 }
 
-/* Styling for the text (member's name) */
-.popup-body {
-  padding: 1rem;
-  font-family: sans-serif;
-  font-weight: bold;
-  color: #333;
+.button-text {
+    transform: skew(20deg) scaleX(-0.2); 
+  transition: transform 0.4s ease-in-out;
 }
-
