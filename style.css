@@ -99,19 +99,19 @@ nav a:hover {
 
 @keyframes band {
   0%, 100% {
-    background-image: url("../images/band/Deafheaven1.jpeg");
+    background-image: url("images/band/Deafheaven1.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
   33% {
-    background-image: url("../images/band/Deafheaven2.jpeg");
+    background-image: url("images/band/Deafheaven2.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
   66% {
-    background-image: url("../images/band/Deafheaven3.jpeg");
+    background-image: url("images/band/Deafheaven3.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
