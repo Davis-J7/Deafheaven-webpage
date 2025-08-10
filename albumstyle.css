@@ -1,0 +1,148 @@
+body {
+    margin: 0px;
+    height: auto;
+    background-color: black;
+    
+}
+
+p {
+    background-color: black;
+    color: #aaade4;
+    font-size: 54px;
+    font-weight: 900;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium';
+    text-align: center;
+}
+
+.deafheaven-text {
+    height: 100px;
+    width: auto;
+}
+
+.deafheaven-sidebar-logo{
+    height: 50px;
+    width: auto;    
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: black;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+.links-container {
+    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 10;
+    width: 300px;
+
+    background-color: black;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.75);
+    transition: 0.5s ease-out;
+}
+
+nav a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    
+    display: flex;
+    justify-content: center;
+
+    text-decoration: none;
+    color: white;
+
+}
+
+nav a:hover {
+    background-color: #aaade4;
+    font-weight: bold;
+}
+
+.open-sidebar-button, .close-sidebar-button {
+    display: block;
+    padding: 10px 20px;
+}
+
+#sidebar-active:checked ~ .links-container {
+    left: 0;
+
+}
+
+#sidebar-active:checked ~ #overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+#sidebar-active { 
+    display: none;
+}
+
+.page-layout {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    gap: 2rem; 
+    box-sizing: border-box;
+}
+
+
+.images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; 
+    width: 100%;
+    max-width: 1200px; 
+    flex-wrap: wrap;   
+}
+
+
+.tracks img,
+.album-cover img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; 
+    padding-top: 1rem; 
+}
+
+.links img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.links img:hover {
+    transform: scale(1.1);
+}
