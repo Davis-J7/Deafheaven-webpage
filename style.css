@@ -30,7 +30,6 @@ p {
     align-items: center;
     justify-content:space-between;
     background-color: black;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 9;
@@ -116,13 +115,6 @@ nav a:hover {
     background-position: center;
     background-repeat: no-repeat;
   }
-}
-
-.Band {
-    width: 1920px;
-    height: 960px;
-    position: absolute;
-    
 }
 
 .band-images {
@@ -278,7 +270,7 @@ nav a:hover {
 
 .story-button:hover {
     
-    transform: skew(-20deg) translateY(-20px) translateX(10px) scaleX(1.2);
+    transform: skew(-20deg)  scaleX(1.2);
     
 }
 
@@ -314,7 +306,221 @@ a {
 
 }
 
+.main-container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            box-sizing: border-box;
+            /* display: flex;
+            align-items: center;
+            padding: 32px; */
+        }
+
+        /* --- Header Section --- */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .band-name {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #FFFFFF;
+            margin: 0;
+        }
+
+        .tour-title {
+            font-size: 24px;
+            color: #A0A0A0;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        
+        .tour-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; 
+        }
+
+        
+        .tour-item {
+            display: flex;
+            flex-wrap: wrap; 
+            align-items: center;
+            background-color: #1A1A1A;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #282828;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .tour-item:hover {
+            background-color: #202020;
+            border-color: #444;
+        }
+
+        
+        .date-section {
+            flex: 0 0 80px; 
+            text-align: center;
+            border-right: 1px solid #333;
+            padding-right: 20px;
+            margin-right: 20px;
+        }
+
+        .date-month {
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #AAAAAA;
+        }
+
+        .date-day {
+            font-size: 32px;
+            font-weight: bold;
+            color: #FFFFFF;
+            line-height: 1.1;
+        }
+
+        .details-section {
+            flex: 1; 
+            min-width: 200px; 
+        }
+
+        .venue-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+
+        .location-name {
+            font-size: 16px;
+            color: #A0A0A0;
+            margin-top: 4px;
+        }
+
+        .ticket-section {
+            margin-left: auto; 
+            padding-left: 20px;
+        }
+
+        .ticket-button {
+            background-color: #EAEAEA;
+            color: #121212;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .ticket-button:hover {
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+        
+        .sold-out-button {
+            background-color: transparent;
+            color: #888;
+            border: 2px solid #555;
+            padding: 10px 24px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: not-allowed;
+            display: inline-block;
+        }
+
+
 .footer-links {
     gap: 4px;
     padding: 16px;
+}
+
+@media (max-width: 768px) {
+
+    p {
+        font-size: 36px; /* Smaller font size for main title */
+    }
+
+    .links-container {
+        width: 250px; /* Slightly smaller sidebar */
+    }
+
+    .albums-container {
+        padding: 48px 16px;
+        gap: 48px; /* Smaller gap */
+    }
+    
+    .band-members-layout {
+        flex-direction: column; /* Stack members vertically */
+        padding: 48px 16px;
+        gap: 48px;
+    }
+    
+    .story-button {
+        font-size: 24px;
+        padding: 15px 40px;
+    }
+    
+    .footer {
+        flex-direction: column; /* Stack footer items */
+        justify-content: center;
+        text-align: center;
+        gap: 16px;
+        padding: 24px;
+    }
+
+    .footer-links a {
+        margin: 0 10px;
+    }
+    
+    /* Responsive Tour Section */
+    .tour-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .date-section {
+        border-right: none;
+        border-bottom: 1px solid #333;
+        padding-right: 0;
+        margin-right: 0;
+        padding-bottom: 15px;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .date-month, .date-day {
+        display: inline-block;
+        margin-right: 10px;
+        line-height: 1;
+    }
+
+    .ticket-section {
+        margin-left: 0;
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .ticket-button, .sold-out-button {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
 }
